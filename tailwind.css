@@ -10,8 +10,8 @@
   }
 
   /** Remove default styles from input[type=number] */
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -24,16 +24,8 @@
   }
 }
 
-.group:disabled .group-disabled\:animate-progress {
-  animation: progress-frame ease normal
-}
-
-@keyframes progress-frame {
-  0% {
-    --dot-progress: 0%
-  }
-
-  to {
-    --dot-progress: 100%
-  }
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
 }

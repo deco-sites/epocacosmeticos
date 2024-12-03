@@ -1,34 +1,72 @@
-import Slider from "../../components/ui/Slider.tsx";
-import { useId } from "../../sdk/useId.ts";
-
-export interface Props {
-  alerts?: string[];
-  /**
-   * @title Autoplay interval
-   * @description time (in seconds) to start the carousel autoplay
-   */
-  interval?: number;
+import { useDevice, useScript } from "@deco/deco/hooks";
+import type { ImageWidget, RichText } from "apps/admin/widgets.ts";
+import { clx } from "../../sdk/clx.ts";
+/**
+ * @titleBy text
+ */
+export interface Alert {
+  desktopText: RichText;
+  desktopLeftIcon?: ImageWidget;
+  mobileText: RichText;
+  mobileLeftIcon?: ImageWidget;
 }
 
-function Alert({ alerts = [], interval = 5 }: Props) {
-  const id = useId();
+interface Props {
+  alerts: Alert[];
+}
+
+export default function Alert({ alerts = [] }: Props) {
+  const isDesktop = useDevice() === "desktop";
 
   return (
-    <div id={id}>
-      <Slider class="carousel carousel-center w-screen gap-6 bg-secondary text-secondary-content text-sm/4">
-        {alerts.map((alert, index) => (
-          <Slider.Item index={index} class="carousel-item">
-            <span
-              class="px-5 py-4 w-screen text-center"
-              dangerouslySetInnerHTML={{ __html: alert }}
-            />
-          </Slider.Item>
-        ))}
-      </Slider>
+    <div class="relative bg-[#e5e3e3]">
+      {alerts.map((
+        { desktopText, desktopLeftIcon, mobileText, mobileLeftIcon },
+        index,
+      ) => (
+        <div
+          data-alert
+          class={clx(
+            "w-full text-center text-[#333] transition-opacity duration-300",
+            !!index &&
+              "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 opacity-0 pointer-events-none",
+          )}
+        >
+          <div
+            dangerouslySetInnerHTML={{
+              __html: isDesktop ? desktopText : mobileText,
+            }}
+            style={{
+              "--left-icon": isDesktop
+                ? `url(${desktopLeftIcon})`
+                : `url(${mobileLeftIcon})`,
+            }}
+            class={clx(
+              "-translate-y-[3px]",
+              (isDesktop ? desktopLeftIcon : mobileLeftIcon) &&
+                "[&>p:first-child]:before:content-[var(--left-icon)] [&>p:first-child]:before:inline-block [&>p:first-child]:before:size-6 [&>p:first-child]:before:translate-y-1.5 [&>p:first-child]:before:mr-1",
+            )}
+          />
+        </div>
+      ))}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: useScript(async () => {
+            const alerts = document.querySelectorAll("[data-alert]");
 
-      <Slider.JS rootId={id} interval={interval && interval * 1e3} />
+            let n = 0;
+
+            while (true) {
+              await new Promise((resolve) => setTimeout(resolve, 5000));
+
+              alerts[n].classList.add("opacity-0", "pointer-events-none");
+
+              n = (n + 1) % alerts.length;
+              alerts[n].classList.remove("opacity-0", "pointer-events-none");
+            }
+          }),
+        }}
+      />
     </div>
   );
 }
-
-export default Alert;

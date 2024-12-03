@@ -1,5 +1,4 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
-import ImageGallerySlider from "../../components/product/Gallery.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
@@ -38,9 +37,6 @@ export default function ProductDetails({ page }: Props) {
           "sm:grid-cols-5 sm:gap-6",
         )}
       >
-        <div class="sm:col-span-3">
-          <ImageGallerySlider page={page} />
-        </div>
         <div class="sm:col-span-2">
           <ProductInfo page={page} />
         </div>

@@ -57,7 +57,7 @@ function CartItem({ item, index, locale, currency }: Props) {
             )}
             hx-on:click={useScript(removeItemHandler)}
           >
-            <Icon id="trash" size={24} />
+            <Icon id="close" size={24} />
           </button>
         </div>
 

@@ -15,30 +15,36 @@ export interface Props {
   loader: Resolved<Suggestion | null>;
 }
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
-  const { loader: { __resolveType, ...loaderProps } } = props;
+  const {
+    loader: { __resolveType, ...loaderProps },
+  } = props;
   const form = await req.formData();
   const query = `${form.get(NAME ?? "q")}`;
   // @ts-expect-error This is a dynamic resolved loader
-  const suggestion = await ctx.invoke(__resolveType, {
+  const suggestion = (await ctx.invoke(__resolveType, {
     ...loaderProps,
     query,
-  }) as Suggestion | null;
+  })) as Suggestion | null;
   return { suggestion };
 };
 export const loader = async (props: Props, req: Request, ctx: AppContext) => {
-  const { loader: { __resolveType, ...loaderProps } } = props;
+  const {
+    loader: { __resolveType, ...loaderProps },
+  } = props;
   const query = new URL(req.url).searchParams.get(NAME ?? "q");
   // @ts-expect-error This is a dynamic resolved loader
-  const suggestion = await ctx.invoke(__resolveType, {
+  const suggestion = (await ctx.invoke(__resolveType, {
     ...loaderProps,
     query,
-  }) as Suggestion | null;
+  })) as Suggestion | null;
   return { suggestion };
 };
 function Suggestions(
   { suggestion }: ComponentProps<typeof loader, typeof action>,
 ) {
-  const { products = [], searches = [] } = suggestion ?? {};
+  let { products = [], searches = [] } = suggestion ?? {};
+  products ??= [];
+
   const hasProducts = Boolean(products.length);
   const hasTerms = Boolean(searches.length);
   return (

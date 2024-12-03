@@ -1,6 +1,6 @@
 {
   "name": "Search Page",
-  "path": "/s",
+  "path": "/pesquisa",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

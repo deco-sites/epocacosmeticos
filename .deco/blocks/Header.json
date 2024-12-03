@@ -1,69 +1,518 @@
 {
   "__resolveType": "site/sections/Header/Header.tsx",
-  "searchbar": {
-    "placeholder": "What are you looking for?",
-    "loader": {
-      "__resolveType": "resolved",
-      "data": null
-    }
-  },
   "alerts": [
-    "<p>Get 10% off today: <strong>NEW10</strong></p>"
+    {
+      "desktopText": "<p><strong>FRETE GRÁTIS</strong> a partir de <strong>R$ 149,00</strong> | <span style=\"font-size: 10pt\">*Válido somente para produtos vendidos por Época</span></p>",
+      "desktopLeftIcon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/145b2359-9bf0-485c-a7b4-729a79051f0e/sample.png",
+      "mobileLeftIcon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/145b2359-9bf0-485c-a7b4-729a79051f0e/sample.png",
+      "mobileText": "<p><strong>FRETE GRÁTIS</strong> a partir de <strong>R$ 149,00</strong></p><p><span style=\"font-size: 10pt\">*Válido somente para produtos vendidos por Época</span></p>"
+    },
+    {
+      "desktopLeftIcon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/145b2359-9bf0-485c-a7b4-729a79051f0e/sample.png",
+      "desktopText": "<p><strong>FRETE GRÁTIS</strong> no APP a partir de <strong>R$ 99,00</strong> | *<span style=\"font-size: 9pt\">Válido somente para produtos vendidos por Época</span></p>",
+      "mobileLeftIcon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/145b2359-9bf0-485c-a7b4-729a79051f0e/sample.png",
+      "mobileText": "<p><strong>FRETE GRÁTIS</strong> no APP a partir de <strong>R$ 99,00</strong></p><p>*<span style=\"font-size: 9pt\">Válido somente para produtos vendidos por Época</span></p>"
+    }
   ],
   "logo": {
-    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ed9f7e80-86a8-4b72-9809-2e4e2e5f0e53",
-    "alt": "Deco Storefront",
-    "width": 160,
-    "height": 40
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/14341d62-c4c0-409f-a13b-dee7908485ac/epocacosmeticos-logo-new.1a3a07e1.svg",
+    "alt": "Época Cosmeticos Logo",
+    "width": 220,
+    "height": 60
   },
-  "navItems": [
-    {
-      "children": [
-        {
-          "image": [],
-          "children": [],
-          "name": "Hello"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "World"
-        }
-      ],
-      "@type": "SiteNavigationElement",
-      "url": "/deals",
-      "name": "Deals"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/valentines-day",
-      "name": "Valentine's Day",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/women",
-      "name": "Women",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/men",
-      "name": "Men",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/clearance",
-      "name": "Clearance",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/activities",
-      "name": "Activities",
-      "children": []
-    }
-  ],
-  "loading": "eager"
+  "navBar": {
+    "items": [
+      {
+        "items": [
+          {
+            "name": "Alta Perfumaria",
+            "link": "https://www.epocacosmeticos.com.br/alta-perfumaria"
+          },
+          {
+            "name": "Perfume Feminino",
+            "link": "https://www.epocacosmeticos.com.br/perfumes/perfume-feminino"
+          },
+          {
+            "name": "Perfume Masculino",
+            "link": "https://www.epocacosmeticos.com.br/perfumes/perfume-masculino"
+          },
+          {
+            "name": "Perfume Unissex",
+            "link": "https://www.epocacosmeticos.com.br/perfumes/perfume-unissex"
+          },
+          {
+            "name": "Perfume Infantil",
+            "link": "https://www.epocacosmeticos.com.br/perfumes/perfume-infantil"
+          },
+          {
+            "name": "Perfume para o Corpo",
+            "link": "https://www.epocacosmeticos.com.br/perfumes/perfume-para-o-corpo"
+          },
+          {
+            "name": "Kits de Perfume",
+            "link": "https://www.epocacosmeticos.com.br/perfumes/kits-de-perfumes"
+          },
+          {
+            "name": "Carolina Herrera",
+            "link": "https://www.epocacosmeticos.com.br/carolina-herrera"
+          },
+          {
+            "name": "Lancôme",
+            "link": "https://www.epocacosmeticos.com.br/lancome"
+          },
+          {
+            "name": "Dior",
+            "link": "https://www.epocacosmeticos.com.br/dior"
+          },
+          {
+            "name": "Rabanne",
+            "link": "https://www.epocacosmeticos.com.br/rabanne"
+          },
+          {
+            "name": "Chloé",
+            "link": "https://www.epocacosmeticos.com.br/chloe"
+          },
+          {
+            "name": "Guerlain",
+            "link": "https://www.epocacosmeticos.com.br/guerlain"
+          }
+        ],
+        "title": "Perfumes",
+        "link": "/perfumes"
+      },
+      {
+        "items": [],
+        "title": "Perfumaria de Nicho",
+        "link": "/perfumes-de-nicho"
+      },
+      {
+        "items": [
+          {
+            "name": "Perfumes",
+            "link": "https://www.epocacosmeticos.com.br/perfumes"
+          },
+          {
+            "name": "Dermocosméticos",
+            "link": "https://www.epocacosmeticos.com.br/dermocosmeticos"
+          },
+          {
+            "name": "Cabelos",
+            "link": "https://www.epocacosmeticos.com.br/cabelos"
+          },
+          {
+            "name": "Maquiagem",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem"
+          },
+          {
+            "name": "Tratamentos",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos"
+          },
+          {
+            "name": "Bem Estar",
+            "link": "https://www.epocacosmeticos.com.br/bem-estar"
+          },
+          {
+            "name": "Cuidados Pessoais",
+            "link": "https://www.epocacosmeticos.com.br/cuidados-pessoais"
+          },
+          {
+            "name": "Unhas",
+            "link": "https://www.epocacosmeticos.com.br/unhas"
+          },
+          {
+            "name": "Homens",
+            "link": "https://www.epocacosmeticos.com.br/homens"
+          },
+          {
+            "name": "Elétricos",
+            "link": "https://www.epocacosmeticos.com.br/eletricos"
+          },
+          {
+            "name": "Cupons de Desconto",
+            "link": "https://www.epocacosmeticos.com.br/quero-cupom"
+          },
+          {
+            "name": "Lançamentos",
+            "link": "https://www.epocacosmeticos.com.br/lancamentos"
+          },
+          {
+            "name": "Eco",
+            "link": "https://www.epocacosmeticos.com.br/projeto-eco"
+          },
+          {
+            "name": "Mundo Época",
+            "link": "https://www.epocacosmeticos.com.br/mundo-epoca"
+          }
+        ],
+        "title": "Dermocosméticos",
+        "link": "/dermocosmeticos"
+      },
+      {
+        "items": [
+          {
+            "name": "Shampoo",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/shampoo"
+          },
+          {
+            "name": "Condicionador",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/condicionador"
+          },
+          {
+            "name": "Máscara Capilar",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/tratamentos-e-mascaras"
+          },
+          {
+            "name": "Finalizador",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/finalizadores-e-modeladores"
+          },
+          {
+            "name": "Tratamento",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/tratamentos-e-mascaras"
+          },
+          {
+            "name": "Coloração",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/coloracao"
+          },
+          {
+            "name": "Kits para Cabelos",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/kits-para-cabelos"
+          },
+          {
+            "name": "Cuidados com o Sol",
+            "link": "https://www.epocacosmeticos.com.br/cabelos?category-1=cabelos&tipos-de-cabelos=expostos-ao-sol&facets=category-1%2Ctipos-de-cabelos&sort=score_desc&page=0"
+          },
+          {
+            "name": "Profissional",
+            "link": "https://www.epocacosmeticos.com.br/pesquisa?q=profissional"
+          },
+          {
+            "name": "Progressiva",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/escova-progressiva-e-alisamento"
+          },
+          {
+            "name": "Leave-in e Creme para pentear",
+            "link": "https://www.epocacosmeticos.com.br/cabelos/leave-in-e-creme-para-pentear"
+          }
+        ],
+        "title": "Cabelos",
+        "link": "/cabelos"
+      },
+      {
+        "items": [
+          {
+            "name": "Olhos",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/olhos"
+          },
+          {
+            "name": "Lábios",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/labios"
+          },
+          {
+            "name": "Face",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/face"
+          },
+          {
+            "name": "Primer e Finalizador",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/primer-e-finalizador"
+          },
+          {
+            "name": "Sobrancelhas",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/sobrancelhas"
+          },
+          {
+            "name": "Maquiagem Bronzeadora",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/maquiagem-bronzeadora"
+          },
+          {
+            "name": "Maleta de Maquiagem",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/maleta-de-maquiagem"
+          },
+          {
+            "name": "BB Cream",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/bb-cream"
+          },
+          {
+            "name": "Aplicadores para maquiagem",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/aplicadores-para-maquiagem"
+          },
+          {
+            "name": "Ferramentas para maquiagem",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/ferramentas-para-maquiagem"
+          },
+          {
+            "name": "Remoção de maquiagem",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/remocao-da-maquiagem"
+          },
+          {
+            "name": "Estojo completo de maquiagem e kits",
+            "link": "https://www.epocacosmeticos.com.br/maquiagem/estojo-refilavel"
+          }
+        ],
+        "link": "/maquiagem",
+        "title": "Maquiagem"
+      },
+      {
+        "items": [
+          {
+            "name": "Limpadores Faciais",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/face/limpadores-faciais"
+          },
+          {
+            "name": "Tônicos Faciais",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/face/tonicos-faciais"
+          },
+          {
+            "name": "Hidratantes Faciais",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/face/hidratantes-faciais"
+          },
+          {
+            "name": "Cuidados com a região dos olhos",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/olhos/cuidados-com-a-area-dos-olhos"
+          },
+          {
+            "name": "Rejuvenescedores faciais",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/face/rejuvenescedores-faciais"
+          },
+          {
+            "name": "Cuidados com os lábios",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/labios"
+          },
+          {
+            "name": "Pescoço e colo",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/pescoco-e-colo"
+          },
+          {
+            "name": "Mãos",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/maos"
+          },
+          {
+            "name": "Cuidados com os Pés",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/cuidados-com-os-pes"
+          },
+          {
+            "name": "Corpo",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/corpo"
+          },
+          {
+            "name": "Cuidados com o Sol",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/cuidados-com-o-sol"
+          },
+          {
+            "name": "Cílios e Sobrancelhas",
+            "link": "https://www.epocacosmeticos.com.br/tratamentos/cilios-e-sobrancelhas"
+          }
+        ],
+        "title": "Tratamentos",
+        "link": "/tratamentos"
+      },
+      {
+        "items": [
+          {
+            "name": "Bem estar sexual",
+            "link": "https://www.epocacosmeticos.com.br/bem-estar/bem-estar-sexual"
+          },
+          {
+            "name": "Aromaterapia",
+            "link": "https://www.epocacosmeticos.com.br/bem-estar/aromaterapia"
+          },
+          {
+            "name": "Nutrição e saúde",
+            "link": "https://www.epocacosmeticos.com.br/bem-estar/nutricao-e-saude"
+          },
+          {
+            "name": "Autocuidado",
+            "link": "https://www.epocacosmeticos.com.br/bem-estar/autocuidado"
+          }
+        ],
+        "title": "Bem estar",
+        "link": "/bem-estar"
+      },
+      {
+        "items": [
+          {
+            "name": "Maybelline",
+            "link": "https://www.epocacosmeticos.com.br/maybelline"
+          },
+          {
+            "name": "Shiseido",
+            "link": "https://www.epocacosmeticos.com.br/shiseido"
+          },
+          {
+            "name": "Dior",
+            "link": "https://www.epocacosmeticos.com.br/dior"
+          },
+          {
+            "name": "The Balm",
+            "link": "https://www.epocacosmeticos.com.br/the-balm"
+          },
+          {
+            "name": "Clinique",
+            "link": "https://www.epocacosmeticos.com.br/clinique"
+          },
+          {
+            "name": "A",
+            "link": "https://www.epocacosmeticos.com.br/marcas#A"
+          },
+          {
+            "name": "B",
+            "link": "https://www.epocacosmeticos.com.br/marcas#B"
+          },
+          {
+            "name": "C",
+            "link": "https://www.epocacosmeticos.com.br/marcas#C"
+          },
+          {
+            "name": "D",
+            "link": "https://www.epocacosmeticos.com.br/marcas#D"
+          },
+          {
+            "name": "E",
+            "link": "https://www.epocacosmeticos.com.br/marcas#E"
+          },
+          {
+            "name": "F",
+            "link": "https://www.epocacosmeticos.com.br/marcas#F"
+          },
+          {
+            "name": "G",
+            "link": "https://www.epocacosmeticos.com.br/marcas#G"
+          },
+          {
+            "name": "H",
+            "link": "https://www.epocacosmeticos.com.br/marcas#H"
+          },
+          {
+            "name": "I",
+            "link": "https://www.epocacosmeticos.com.br/marcas#I"
+          },
+          {
+            "name": "J",
+            "link": "https://www.epocacosmeticos.com.br/marcas#J"
+          },
+          {
+            "name": "K",
+            "link": "https://www.epocacosmeticos.com.br/marcas#K"
+          },
+          {
+            "name": "L",
+            "link": "https://www.epocacosmeticos.com.br/marcas#L"
+          },
+          {
+            "name": "M",
+            "link": "https://www.epocacosmeticos.com.br/marcas#M"
+          },
+          {
+            "name": "N",
+            "link": "https://www.epocacosmeticos.com.br/marcas#N"
+          },
+          {
+            "name": "O",
+            "link": "https://www.epocacosmeticos.com.br/marcas#O"
+          },
+          {
+            "name": "P",
+            "link": "https://www.epocacosmeticos.com.br/marcas#P"
+          },
+          {
+            "name": "Q",
+            "link": "https://www.epocacosmeticos.com.br/marcas#Q"
+          },
+          {
+            "name": "R",
+            "link": "https://www.epocacosmeticos.com.br/marcas#R"
+          },
+          {
+            "name": "S",
+            "link": "https://www.epocacosmeticos.com.br/marcas#S"
+          },
+          {
+            "name": "T",
+            "link": "https://www.epocacosmeticos.com.br/marcas#T"
+          },
+          {
+            "name": "U",
+            "link": "https://www.epocacosmeticos.com.br/marcas#U"
+          },
+          {
+            "name": "V",
+            "link": "https://www.epocacosmeticos.com.br/marcas#V"
+          },
+          {
+            "name": "W",
+            "link": "https://www.epocacosmeticos.com.br/marcas#W"
+          },
+          {
+            "name": "X",
+            "link": "https://www.epocacosmeticos.com.br/marcas#X"
+          },
+          {
+            "name": "Y",
+            "link": "https://www.epocacosmeticos.com.br/marcas#Y"
+          },
+          {
+            "name": "Z",
+            "link": "https://www.epocacosmeticos.com.br/marcas#Z"
+          },
+          {
+            "name": "0-9",
+            "link": "https://www.epocacosmeticos.com.br/marcas#123"
+          },
+          {
+            "name": "Todas",
+            "link": "https://www.epocacosmeticos.com.br/marcas#123"
+          }
+        ],
+        "title": "Marcas",
+        "link": "/marcas"
+      },
+      {
+        "items": [],
+        "title": "Cupons",
+        "link": "https://www.epocacosmeticos.com.br/quero-cupom"
+      },
+      {
+        "items": [],
+        "title": "Blackfriday",
+        "link": "/blackfriday"
+      },
+      {
+        "items": [
+          {
+            "name": "Rastreie seu pedido",
+            "link": "https://secure.epocacosmeticos.com.br/_secure/account/#/orders"
+          },
+          {
+            "name": "Vale compra",
+            "link": "https://atende.epocacosmeticos.com.br/hc/pt-br/articles/360050628972-Vale-compra"
+          },
+          {
+            "name": "Reembolso de valor cancelado",
+            "link": "https://atende.epocacosmeticos.com.br/hc/pt-br/articles/360007642492-Como-%C3%A9-pago-o-reembolso-do-valor-cancelado"
+          },
+          {
+            "name": "Aprovação de pedido",
+            "link": "https://atende.epocacosmeticos.com.br/hc/pt-br/articles/360007642412-Qual-o-prazo-para-aprova%C3%A7%C3%A3o-do-pedido"
+          },
+          {
+            "name": "Brindes e amostras",
+            "link": "https://atende.epocacosmeticos.com.br/hc/pt-br/articles/360007837951-Como-ganho-brindes-e-amostras"
+          },
+          {
+            "name": "Devolução de produto",
+            "link": "https://atende.epocacosmeticos.com.br/hc/pt-br/articles/360007838011-Como-fa%C3%A7o-para-devolver-um-produto"
+          },
+          {
+            "name": "Forma de envio",
+            "link": "https://atende.epocacosmeticos.com.br/hc/pt-br/articles/360027554611-Qual-a-forma-de-envio"
+          },
+          {
+            "name": "Alteração de dados cadastrais",
+            "link": "https://atende.epocacosmeticos.com.br/hc/pt-br/articles/360007837871-Como-posso-alterar-endere%C3%A7o-e-dados-cadastrais"
+          }
+        ],
+        "title": "Atendimento",
+        "link": "https://atende.epocacosmeticos.com.br/hc/pt-br"
+      }
+    ]
+  }
 }

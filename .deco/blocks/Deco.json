@@ -22,9 +22,12 @@
           },
           {
             "weight": "700"
+          },
+          {
+            "weight": "900"
           }
         ],
-        "family": "Inter"
+        "family": "Roboto"
       }
     ]
   },
