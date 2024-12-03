@@ -34,10 +34,13 @@ function Desktop({ items }: Props) {
     <nav class="flex h-12">
       <ul class="flex">
         {[ALL_ITEMS, ...items].map(({ title, link, items }, index) => {
+          const Name = link ? "a" : "div";
+          const NameProps = link ? { href: link } : {};
+
           return (
             <li>
-              <a
-                href={link}
+              <Name
+                {...NameProps}
                 class={clx(
                   "h-12 text-[#333] hover:text-[#e70d91] relative group flex gap-2 justify-center items-center whitespace-nowrap peer",
                   !!index && "px-3",
@@ -46,7 +49,7 @@ function Desktop({ items }: Props) {
                 {index === 0 && <Icon id="menu" size={20} />}
                 <div class="absolute left-0 bottom-1 w-0 h-0.5 bg-[#e70d91] group-hover:w-full transition-all duration-300" />
                 {title}
-              </a>
+              </Name>
 
               {items.length > 0 && (
                 <div class="absolute left-0 top-full bg-[#f9f9f9] w-screen min-h-[250px] py-3 z-10 hidden peer-hover:flex hover:flex">

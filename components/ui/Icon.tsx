@@ -8,7 +8,8 @@ export type AvailableIcons =
   | "heart"
   | "bag"
   | "close"
-  | "menu";
+  | "menu"
+  | "really-large-chevron-right";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

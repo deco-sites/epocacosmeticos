@@ -38,7 +38,11 @@ const Desktop = ({ logo, navBar }: Props) => (
           <span class="text-lg leading-none">Oie!</span>
           <div class="text-xs flex items-center gap-1">
             Vem fazer seu login ;)
-            <Icon id="chevron-right" size={16} class="text-[#b3b3b3]" />
+            <Icon
+              id="chevron-right"
+              size={14}
+              class="text-[#b3b3b3] rotate-90"
+            />
           </div>
         </div>
       </div>
