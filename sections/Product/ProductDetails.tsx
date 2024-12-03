@@ -3,6 +3,7 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
+import Print from "../../sdk/Print.tsx";
 
 export interface Props {
   /** @title Integration */
@@ -28,6 +29,7 @@ export default function ProductDetails({ page }: Props) {
 
   return (
     <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
+      <Print data={page} />
       <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
 
       <div

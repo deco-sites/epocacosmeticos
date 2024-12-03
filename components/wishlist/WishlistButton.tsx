@@ -1,13 +1,12 @@
-import { AnalyticsItem } from "apps/commerce/types.ts";
-import { clx } from "../../sdk/clx.ts";
-import { useId } from "../../sdk/useId.ts";
-import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import Icon from "../ui/Icon.tsx";
 import { useScript } from "@deco/deco/hooks";
+import { useId } from "../../sdk/useId.ts";
+import Icon from "../ui/Icon.tsx";
+
 interface Props {
-  variant?: "full" | "icon";
-  item: AnalyticsItem;
+  productID: string;
+  productGroupID: string;
 }
+
 const onLoad = (id: string, productID: string) =>
   window.STOREFRONT.WISHLIST.subscribe((sdk) => {
     const button = document.getElementById(id) as HTMLButtonElement;
@@ -23,48 +22,36 @@ const onLoad = (id: string, productID: string) =>
       span.innerHTML = inWishlist ? "Remove from wishlist" : "Add to wishlist";
     }
   });
+
 const onClick = (productID: string, productGroupID: string) => {
   const button = event?.currentTarget as HTMLButtonElement;
   const user = window.STOREFRONT.USER.getUser();
+
   if (user?.email) {
     button.classList.add("htmx-request");
     window.STOREFRONT.WISHLIST.toggle(productID, productGroupID);
   } else {
-    window.alert(`Please login to add the product to your wishlist`);
+    alert("Please login to add the product to your wishlist");
   }
 };
-function WishlistButton({ item, variant = "full" }: Props) {
-  // deno-lint-ignore no-explicit-any
-  const productID = (item as any).item_id;
-  const productGroupID = item.item_group_id ?? "";
+
+function WishlistButton({ productID, productGroupID }: Props) {
   const id = useId();
-  const addToWishlistEvent = useSendEvent({
-    on: "click",
-    event: {
-      name: "add_to_wishlist",
-      params: { items: [item] },
-    },
-  });
+
   return (
     <>
       <button
         id={id}
+        type="button"
         data-wishlist-button
         disabled
-        {...addToWishlistEvent}
-        aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
-        class={clx(
-          "btn no-animation",
-          variant === "icon"
-            ? "btn-circle btn-ghost btn-sm"
-            : "btn-primary btn-outline gap-2 w-full",
-        )}
+        class="size-8 rounded-full bg-[#f7f7f7] border border-transparent hover:border-[#E70D91] group/wishlist flex items-center justify-center transition-colors"
       >
-        <Icon id="heart" class="[.htmx-request_&]:hidden" fill="none" />
-        {variant === "full" && (
-          <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
-        )}
+        <Icon
+          id="heart-wishlist"
+          class="[.htmx-request_&]:hidden text-[#E70D91] group-hover/wishlist:fill-[#E70D91] transition-colors"
+        />
         <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
       </button>
       <script

@@ -1,63 +1,67 @@
-import { Product } from "apps/commerce/types.ts";
-import { clx } from "../../sdk/clx.ts";
+import type { Product } from "apps/commerce/types.ts";
+import { useId } from "../../sdk/useId.ts";
 import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import ProductCard from "./ProductCard.tsx";
-import { useId } from "../../sdk/useId.ts";
+import { useDevice } from "@deco/deco/hooks";
 
 interface Props {
   products: Product[];
-  itemListName?: string;
 }
 
-function ProductSlider({ products, itemListName }: Props) {
+function ProductSlider({ products }: Props) {
   const id = useId();
+  const isDesktop = useDevice() === "desktop";
 
   return (
-    <>
-      <div
-        id={id}
-        class="grid grid-rows-1"
-        style={{
-          gridTemplateColumns: "min-content 1fr min-content",
-        }}
-      >
-        <div class="col-start-1 col-span-3 row-start-1 row-span-1">
-          <Slider class="carousel carousel-center sm:carousel-end gap-5 sm:gap-10 w-full">
-            {products?.map((product, index) => (
-              <Slider.Item
-                index={index}
-                class={clx(
-                  "carousel-item",
-                  "first:pl-5 first:sm:pl-0",
-                  "last:pr-5 last:sm:pr-0",
-                )}
-              >
-                <ProductCard
-                  index={index}
-                  product={product}
-                  itemListName={itemListName}
-                  class="w-[287px] sm:w-[300px]"
-                />
-              </Slider.Item>
-            ))}
-          </Slider>
-        </div>
+    <div id={id} class="relative group">
+      <Slider class="carousel gap-4 w-full pb-2">
+        {products?.map((product, index) => (
+          <Slider.Item
+            index={index}
+            class="carousel-item w-[calc(50%-16px+(16px/2))] md:w-[calc(33.333%-16px+(16px/3))] lg:w-[calc(25%-16px+(16px/4))] xl:w-[calc(20%-16px+(16px/5))]"
+          >
+            <ProductCard product={product} />
+          </Slider.Item>
+        ))}
+      </Slider>
 
-        <div class="col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]">
-          <Slider.PrevButton class="hidden sm:flex disabled:invisible btn btn-outline btn-sm btn-circle no-animation">
-            <Icon id="chevron-right" class="rotate-180" />
+      {isDesktop && (
+        <>
+          <Slider.PrevButton
+            class="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+            disabled={false}
+          >
+            <Icon
+              id="really-large-chevron-right"
+              class="rotate-180"
+              width={47}
+              height={91}
+            />
           </Slider.PrevButton>
-        </div>
 
-        <div class="col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]">
-          <Slider.NextButton class="hidden sm:flex disabled:invisible btn btn-outline btn-sm btn-circle no-animation">
-            <Icon id="chevron-right" />
+          <Slider.NextButton
+            class="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+            disabled={false}
+          >
+            <Icon id="really-large-chevron-right" width={47} height={91} />
           </Slider.NextButton>
+        </>
+      )}
+
+      {!isDesktop && (
+        <div class="flex justify-center gap-2 mt-2 mx-auto">
+          {products.map((_, index) => (
+            <Slider.Dot
+              index={index}
+              class="bg-black/20 size-2.5 disabled:bg-[#e70d91] rounded-full"
+            />
+          ))}
         </div>
-      </div>
+      )}
+
       <Slider.JS rootId={id} />
-    </>
+    </div>
   );
 }
 

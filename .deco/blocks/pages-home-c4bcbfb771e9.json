@@ -53,11 +53,79 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Images/BannerSlider.tsx",
+        "items": [
+          {
+            "mobile": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVERMOBILE-0312-CARD1-9276.png",
+            "desktop": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVER-0312-CARD1-9272.png",
+            "href": "#/",
+            "alt": "Uma linda imagem"
+          },
+          {
+            "mobile": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVERMOBILE-0312-CARD2-9277.png",
+            "desktop": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVER-0312-CARD2-9273.png",
+            "href": "#/",
+            "alt": "Uma linda imagem"
+          },
+          {
+            "mobile": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVERMOBILE-0312-CARD3-9278.png",
+            "desktop": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVER-0312-CARD3-9274.png",
+            "href": "#/",
+            "alt": "Uma linda imagem"
+          },
+          {
+            "mobile": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVERMOBILE-0312-CARD4-9279.png",
+            "desktop": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVER-0312-CARD4-9275.png",
+            "href": "#/",
+            "alt": "Uma linda imagem"
+          }
+        ],
+        "preload": true
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Featured Products",
+        "title": "Cabelos até 60% OFF",
         "cta": "/mono",
         "products": {
-          "__resolveType": "Product List Loader"
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "protetor",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Skincare Completo até 40% OFF",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "perfume",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
         }
       }
     },
@@ -74,6 +142,245 @@
         "images": {
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/cf96d47f-564f-40da-ad94-7acac5f39327",
           "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4d5c3212-3f75-4d50-89f3-970815748b43"
+        },
+        "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/c7ffc621-730b-42c8-98f6-b0d6d8a7a3dd/bd1fb823-a02a-4606-be62-3fa85ead4df4___af8a8db3e07e0138dc75143522d0ca41.gif",
+        "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/6da2d4a5-a794-4181-8db2-48a3b5266b3a/05bdd06d-7370-4acb-8218-70a778f8c738___01681bed0fcae47a163111e2ccb4fd3c.gif",
+        "href": "#/",
+        "alt": "Uma linda imagem"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Os melhores perfumes até 60% OFF",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "perfume",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Makes com até 85% OFF",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "perfume",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/BrandSlider.tsx",
+        "title": "Navegue pelas Marcas",
+        "brands": [
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/7d392084-be5c-48f5-a643-a157609cffc7___33af61f897a6e72b6c5a49c6243d0fb3.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/52bb7614-4100-47ff-b4d8-85af2eb422ce___59aa279de873817f8e511afb726c729a.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/472adc79-5ea1-4786-be2a-b254799bd90e___34f219fcf0bfb511cc7449ae4267dea8.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/f74ab7a4-fe38-4c7c-8c17-53ad5d63ccd5___95238c7dc7dc7fb777813bf697373a9a.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/6b8b6225-576d-4c7d-8cac-2e5ccd015925___d84fbf7ccb3882b6fc60278e203796b3.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/5932d5db-fb2d-4113-aa0d-5003abd5445a___29a4f9bcff2632272eca6d4b352c170b.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/d28c9163-2f1d-491a-b5d6-14a6c6c1a2f3___b1eed134fcfad8233186645c9684a19c.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/5a7bbf24-1d36-4de9-b1e3-5b924d41131b___d39928d9b44d8cf22e9efda428183c02.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/5b831875-0823-4437-a42d-85f8e5b216cb___597c4f396c9a8af3e308586ac37e5a33.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/869a1f08-1bcf-4ae2-8a5b-d3eac7f20673___a662653f363821b8d412f21d3c508a00.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/0df3b289-e974-4c67-bf81-ad481b972dcd___69175c19d10b8fe391f4bfa5bc0f9506.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/df4af703-abe1-4b13-af3e-5a9b01f70fda___582ebf1be99e31af0f84bbd78c2e99b2.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/7d392084-be5c-48f5-a643-a157609cffc7___33af61f897a6e72b6c5a49c6243d0fb3.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/52bb7614-4100-47ff-b4d8-85af2eb422ce___59aa279de873817f8e511afb726c729a.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/472adc79-5ea1-4786-be2a-b254799bd90e___34f219fcf0bfb511cc7449ae4267dea8.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/f74ab7a4-fe38-4c7c-8c17-53ad5d63ccd5___95238c7dc7dc7fb777813bf697373a9a.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/6b8b6225-576d-4c7d-8cac-2e5ccd015925___d84fbf7ccb3882b6fc60278e203796b3.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/5932d5db-fb2d-4113-aa0d-5003abd5445a___29a4f9bcff2632272eca6d4b352c170b.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/d28c9163-2f1d-491a-b5d6-14a6c6c1a2f3___b1eed134fcfad8233186645c9684a19c.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/5a7bbf24-1d36-4de9-b1e3-5b924d41131b___d39928d9b44d8cf22e9efda428183c02.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/5b831875-0823-4437-a42d-85f8e5b216cb___597c4f396c9a8af3e308586ac37e5a33.png",
+            "href": "#/"
+          },
+          {
+            "image": "https://epocacosmeticos.vtexassets.com/assets/vtex.file-manager-graphql/images/869a1f08-1bcf-4ae2-8a5b-d3eac7f20673___a662653f363821b8d412f21d3c508a00.png",
+            "href": "#/"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Época Indica",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "perfume",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Presentes Exclusivos de DL",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "perfume",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "O seu queridinho Maybelline tem aqui!",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "perfume",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Produtos Patrocinados",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "perfume",
+            "count": 10,
+            "fuzzy": "automatic"
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
         }
       }
     },

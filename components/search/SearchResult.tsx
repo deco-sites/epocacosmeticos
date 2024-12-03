@@ -52,9 +52,7 @@ function PageResult(props: SectionProps<typeof loader>) {
   const { layout, startingPage = 0, url, partial } = props;
   const page = props.page!;
   const { products, pageInfo } = page;
-  const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
-  const offset = zeroIndexedOffsetPage * perPage;
   const nextPageUrl = useUrlRebased(pageInfo.nextPage, url);
   const prevPageUrl = useUrlRebased(pageInfo.previousPage, url);
   const partialPrev = useSection({
@@ -80,9 +78,7 @@ function PageResult(props: SectionProps<typeof loader>) {
           hx-swap="outerHTML show:parent:top"
           hx-get={partialPrev}
         >
-          <span class="inline [.htmx-request_&]:hidden">
-            Show Less
-          </span>
+          <span class="inline [.htmx-request_&]:hidden">Show Less</span>
           <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
         </a>
       </div>
@@ -101,8 +97,6 @@ function PageResult(props: SectionProps<typeof loader>) {
             key={`product-card-${product.productID}`}
             product={product}
             preload={index === 0}
-            index={offset + index}
-            class="h-full min-w-[160px] max-w-[300px]"
           />
         ))}
       </div>
@@ -120,9 +114,7 @@ function PageResult(props: SectionProps<typeof loader>) {
                 hx-swap="outerHTML show:parent:top"
                 hx-get={partialNext}
               >
-                <span class="inline [.htmx-request_&]:hidden">
-                  Show More
-                </span>
+                <span class="inline [.htmx-request_&]:hidden">Show More</span>
                 <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
               </a>
             </div>
@@ -199,7 +191,7 @@ function Result(props: SectionProps<typeof loader>) {
         item_list_id: breadcrumb.itemListElement?.at(-1)?.item,
         items: page.products?.map((product, index) =>
           mapProductToAnalyticsItem({
-            ...(useOffer(product.offers)),
+            ...useOffer(product.offers),
             index: offset + index,
             product,
             breadcrumbList: page.breadcrumb,
@@ -272,9 +264,7 @@ function Result(props: SectionProps<typeof loader>) {
                   {device === "desktop" && (
                     <div class="flex justify-between items-center">
                       {results}
-                      <div>
-                        {sortBy}
-                      </div>
+                      <div>{sortBy}</div>
                     </div>
                   )}
                   <PageResult {...props} />

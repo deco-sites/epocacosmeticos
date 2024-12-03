@@ -23,3 +23,10 @@
     height: 100vh;
   }
 }
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

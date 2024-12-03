@@ -6,6 +6,7 @@ export type AvailableIcons =
   | "user"
   | "chevron-right"
   | "heart"
+  | "heart-wishlist"
   | "bag"
   | "close"
   | "menu"

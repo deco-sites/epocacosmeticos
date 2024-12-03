@@ -27,12 +27,7 @@ function ProductInfo({ page }: Props) {
   const description = product.description || isVariantOf?.description;
   const title = isVariantOf?.name ?? product.name;
 
-  const {
-    price = 0,
-    listPrice,
-    seller = "1",
-    availability,
-  } = useOffer(offers);
+  const { price = 0, listPrice, seller = "1", availability } = useOffer(offers);
 
   const percent = listPrice && price
     ? Math.round(((listPrice - price) / listPrice) * 100)
@@ -84,9 +79,7 @@ function ProductInfo({ page }: Props) {
       </span>
 
       {/* Product Name */}
-      <span class={clx("text-3xl font-semibold", "pt-4")}>
-        {title}
-      </span>
+      <span class={clx("text-3xl font-semibold", "pt-4")}>{title}</span>
 
       {/* Prices */}
       <div class="flex gap-3 pt-1">
@@ -117,7 +110,10 @@ function ProductInfo({ page }: Props) {
                 class="btn btn-primary no-animation"
                 disabled={false}
               />
-              <WishlistButton item={item} />
+              <WishlistButton
+                productID={productID}
+                productGroupID={isVariantOf?.productGroupID ?? ""}
+              />
             </>
           )
           : <OutOfStock productID={productID} />}

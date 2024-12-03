@@ -29,7 +29,7 @@ function Carousel({ images = [], preload }: Props) {
   const isDesktop = useDevice() === "desktop";
 
   return (
-    <div id={id} class="container relative group">
+    <div id={id} class="container relative group mb-10 md:mb-6">
       <Slider class="carousel carousel-center w-full">
         {images.map(({ href, mobile, desktop, alt }, index) => {
           const lcp = index === 0 && preload;
@@ -73,7 +73,7 @@ function Carousel({ images = [], preload }: Props) {
       {isDesktop && (
         <>
           <Slider.PrevButton
-            class="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 hidden group-hover:block"
+            class="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
             disabled={false}
           >
             <Icon
@@ -85,7 +85,7 @@ function Carousel({ images = [], preload }: Props) {
           </Slider.PrevButton>
 
           <Slider.NextButton
-            class="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 hidden group-hover:block"
+            class="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
             disabled={false}
           >
             <Icon id="really-large-chevron-right" width={47} height={91} />
@@ -93,7 +93,7 @@ function Carousel({ images = [], preload }: Props) {
         </>
       )}
 
-      <div class="flex justify-center gap-2 absolute bottom-6 left-1/2 -translate-x-1/2">
+      <div class="flex justify-center gap-3 md:gap-2 absolute -bottom-4 md:bottom-6 left-1/2 -translate-x-1/2">
         {images.map((_, index) => (
           <Slider.Dot
             index={index}

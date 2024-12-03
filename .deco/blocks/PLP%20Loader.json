@@ -1,6 +1,6 @@
 {
   "data": {
-    "__resolveType": "vtex/loaders/ProductListingPage.ts",
+    "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
     "count": 12,
     "@type": "ProductListingPage",
     "breadcrumb": {

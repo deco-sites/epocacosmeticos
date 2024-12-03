@@ -3,7 +3,8 @@
   "props": {
     "sort": "",
     "query": "a",
-    "count": 6
+    "count": 6,
+    "fuzzy": "automatic"
   },
   "filters": {
     "tags": [],
