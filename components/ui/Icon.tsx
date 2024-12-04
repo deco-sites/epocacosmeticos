@@ -10,6 +10,10 @@ export type AvailableIcons =
   | "bag"
   | "close"
   | "menu"
+  | "chevron-down"
+  | "filter"
+  | "check"
+  | "home"
   | "really-large-chevron-right";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {

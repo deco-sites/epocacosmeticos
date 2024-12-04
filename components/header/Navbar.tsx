@@ -32,13 +32,13 @@ function Desktop({ items }: Props) {
 
   return (
     <nav class="flex h-12">
-      <ul class="flex">
+      <ul class="flex w-full">
         {[ALL_ITEMS, ...items].map(({ title, link, items }, index) => {
           const Name = link ? "a" : "div";
           const NameProps = link ? { href: link } : {};
 
           return (
-            <li>
+            <li class="flex-1">
               <Name
                 {...NameProps}
                 class={clx(

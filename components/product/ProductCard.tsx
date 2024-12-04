@@ -111,12 +111,14 @@ function ProductCard({ product, preload }: Props) {
 
       {/* Brand */}
       {brand && (
-        <div class="font-bold text-[#333] uppercase mt-2">{brand.name}</div>
+        <div class="font-bold text-[#333] uppercase mt-2 truncate">
+          {brand.name}
+        </div>
       )}
 
       {/* Title */}
       {title && (
-        <h3 class="text-[#4f4f4f] mt-0.5 mb-2 text-xs lg:text-sm h-[14px] md:h-[35px] lg:h-[43px] line-clamp-2">
+        <h3 class="text-[#4f4f4f] mt-0.5 mb-2 text-xs lg:text-sm h-[14px] md:h-[35px] lg:h-[43px] line-clamp-3">
           {title}
         </h3>
       )}
