@@ -14,6 +14,8 @@ export default function Searchbar() {
           const form = document.getElementById(id) as HTMLFormElement;
           const q = form.elements.namedItem("q") as HTMLInputElement;
 
+          event?.preventDefault();
+
           location.href = `/pesquisa?q=${q.value}`;
         }, id)}
       >

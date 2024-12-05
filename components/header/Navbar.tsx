@@ -38,12 +38,12 @@ function Desktop({ items }: Props) {
           const NameProps = link ? { href: link } : {};
 
           return (
-            <li class="flex-1">
+            <li class={clx(index !== 0 && "flex-1")}>
               <Name
                 {...NameProps}
                 class={clx(
                   "h-12 text-[#333] hover:text-[#e70d91] relative group flex gap-2 justify-center items-center whitespace-nowrap peer",
-                  !!index && "px-3",
+                  index === 0 ? "pr-4" : "px-3",
                 )}
               >
                 {index === 0 && <Icon id="menu" size={20} />}

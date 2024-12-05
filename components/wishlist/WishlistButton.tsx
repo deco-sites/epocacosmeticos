@@ -1,10 +1,12 @@
 import { useScript } from "@deco/deco/hooks";
 import { useId } from "../../sdk/useId.ts";
 import Icon from "../ui/Icon.tsx";
+import { clx } from "../../sdk/clx.ts";
 
 interface Props {
   productID: string;
   productGroupID: string;
+  variant?: "big";
 }
 
 const onLoad = (id: string, productID: string) =>
@@ -35,7 +37,7 @@ const onClick = (productID: string, productGroupID: string) => {
   }
 };
 
-function WishlistButton({ productID, productGroupID }: Props) {
+function WishlistButton({ productID, productGroupID, variant }: Props) {
   const id = useId();
 
   return (
@@ -46,11 +48,15 @@ function WishlistButton({ productID, productGroupID }: Props) {
         data-wishlist-button
         disabled
         hx-on:click={useScript(onClick, productID, productGroupID)}
-        class="size-8 rounded-full bg-[#f7f7f7] border border-transparent hover:border-[#E70D91] group/wishlist flex items-center justify-center transition-colors"
+        class={clx(
+          "rounded-full bg-[#f7f7f7] border border-transparent hover:border-[#E70D91] group/wishlist flex items-center justify-center transition-colors",
+          variant === "big" ? "size-10" : "size-8",
+        )}
       >
         <Icon
           id="heart-wishlist"
           class="[.htmx-request_&]:hidden text-[#E70D91] group-hover/wishlist:fill-[#E70D91] transition-colors"
+          size={variant === "big" ? 32 : undefined}
         />
         <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
       </button>

@@ -30,3 +30,17 @@
     padding-right: 8px;
   }
 }
+
+@keyframes add-to-cart-skew-animation {
+  0% {
+    left: calc(-100% - 5em);
+  }
+
+  15% {
+    left: calc(100% + 5em);
+  }
+
+  100% {
+    left: calc(100% + 5em);
+  }
+}

@@ -2,7 +2,6 @@ import { asset } from "$fresh/runtime.ts";
 import type { Product } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import { formatPrice } from "../../sdk/format.ts";
-import Print from "../../sdk/Print.tsx";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
@@ -41,8 +40,6 @@ function ProductCard({ product, preload }: Props) {
 
   return (
     <div class="shadow-md px-2 pb-5 pt-0 relative w-full lg:group/card">
-      <Print data={product} />
-
       <a
         href={relativeUrl}
         class="absolute size-full z-10 flex items-center justify-center font-bold opacity-0 pointer-events-none group-hover/card:opacity-100 group-hover/card:pointer-events-auto transition-opacity bg-white/30"

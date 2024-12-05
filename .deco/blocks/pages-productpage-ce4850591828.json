@@ -36,7 +36,28 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "You may also like",
+        "title": "Produtos Patrocinados",
+        "products": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+          "props": {
+            "sort": "",
+            "query": "a",
+            "count": 9
+          },
+          "filters": {
+            "tags": [],
+            "productTypes": [],
+            "productVendors": [],
+            "variantOptions": []
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Aproveite pra presentear!",
         "products": {
           "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
           "props": {

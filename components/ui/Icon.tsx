@@ -14,8 +14,9 @@ export type AvailableIcons =
   | "filter"
   | "check"
   | "home"
-  | "really-large-chevron-right";
-
+  | "seller-check"
+  | "really-large-chevron-right"
+  | "shipping";
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
    * Symbol id from element to render. Take a look at `/static/icons.svg`.

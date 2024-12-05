@@ -7,5 +7,16 @@
       "param": "slug"
     }
   },
-  "extensions": []
+  "extensions": [
+    {
+      "__resolveType": "vtex/loaders/product/extensions/detailsPage.ts",
+      "kitItems": true,
+      "simulate": false,
+      "similars": false,
+      "variants": false,
+      "reviews": false,
+      "inventory": false,
+      "brands": false
+    }
+  ]
 }

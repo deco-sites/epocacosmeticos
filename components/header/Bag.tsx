@@ -8,6 +8,8 @@ const onLoad = (id: string) =>
     const counter = document.getElementById(id) as HTMLDivElement;
     const count = sdk.getCart()?.items.length ?? 0;
 
+    if (!counter) return;
+
     counter.innerText = count > 9 ? "9+" : count.toString();
   });
 
