@@ -4,7 +4,6 @@ import type { ProductListingPage } from "apps/commerce/types.ts";
 import ProductCard from "../../components/product/ProductCard.tsx";
 import Filters from "../../components/search/Filters.tsx";
 import { useId } from "../../sdk/useId.ts";
-import Breadcrumb from "../ui/Breadcrumb.tsx";
 import Sort from "./Sort.tsx";
 import Icon from "../ui/Icon.tsx";
 
@@ -110,7 +109,7 @@ function Result(props: SectionProps<typeof loader>) {
   const isDesktop = useDevice() === "desktop";
   const { url, partial } = props;
   const page = props.page!;
-  const { filters, breadcrumb, pageInfo, sortOptions } = page;
+  const { filters, pageInfo, sortOptions } = page;
   const mobileFilterId = useId();
 
   const sortBy = sortOptions.length > 0 && (
@@ -124,8 +123,6 @@ function Result(props: SectionProps<typeof loader>) {
           ? <PageResult {...props} />
           : (
             <div class="container flex flex-col gap-4">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
-
               <div class="flex gap-6">
                 {isDesktop && (
                   <aside class="w-full max-w-[300px] flex flex-col gap-6">

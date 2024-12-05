@@ -147,7 +147,7 @@ function ProductInfo({ page }: Props) {
               <Icon
                 id="chevron-right"
                 size={16}
-                class="text-[#e70d91] max-lg:-translate-y-0.5"
+                class="text-[#e70d91] -translate-y-0.5"
               />
             </a>
           </span>

@@ -130,14 +130,16 @@ function Gallery({ product }: { product: Product }) {
           />
         </Slider.NextButton>
 
-        <div class="flex justify-center gap-3 absolute -bottom-2 left-1/2 -translate-x-1/2">
-          {images.map((_, index) => (
-            <Slider.Dot
-              index={index}
-              class="bg-[#f1f1f1] size-4 disabled:bg-[#e70d91] rounded-full shadow-[0_2px_2px_#1a1a1a]"
-            />
-          ))}
-        </div>
+        {!isDesktop && (
+          <div class="flex justify-center gap-3 absolute -bottom-2 left-1/2 -translate-x-1/2">
+            {images.map((_, index) => (
+              <Slider.Dot
+                index={index}
+                class="bg-[#f1f1f1] size-4 disabled:bg-[#e70d91] rounded-full shadow-[0_2px_2px_#1a1a1a]"
+              />
+            ))}
+          </div>
+        )}
 
         <Slider.JS rootId={id} infinite />
       </div>

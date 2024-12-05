@@ -26,6 +26,37 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "website/flags/multivariate/section.ts",
+        "variants": [
+          {
+            "value": {
+              "__resolveType": "site/sections/Images/PDPBanner.tsx",
+              "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/2db34766-d99a-40c2-825b-674db188e097/EPC2024-Campanha-0412--PDP-Mobile-640x120.png",
+              "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/82b21c0d-e893-4d65-b837-e45e2f0598b4/EPC2024-Campanha-0412--PDP-Desk-1240x60.png",
+              "href": "https://recs.richrelevance.com/rrserver/click?a=c85912f892c73e30&vg=b7a5b4b3-c6eb-48e0-3da4-5264e525f5ce&pti=1&pa=product_page&hpi=16364&rti=2&sgs=&u=&mvtId=-1&mvtTs=1733364824846&uguid=f1fd2d8b-f356-442c-b8e5-2764e5253e53&channelId=WEB_PHONE&s=e6fd9edc-f209-48ab-8a2c-2e6b16eb9112&pg=3627&p=content__30870&ct=https%3A%2F%2Fwww.epocacosmeticos.com.br%2Fcolecao%2F330"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Includes",
+                "pathname": "/protetor-solar-com-cor-fps70-mantecorp-skicare-episol/p"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Empty.tsx"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/always.ts"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Product/ProductDetails.tsx",
         "page": {
           "__resolveType": "PDP Loader"

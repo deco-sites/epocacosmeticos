@@ -121,7 +121,7 @@ function Header({ logo, ...rest }: Props) {
   rest.alerts ??= [];
 
   return (
-    <header class="relative">
+    <header class="relative shadow-md">
       {rest.alerts.length > 0 && <Alert alerts={rest.alerts} />}
       <div class="container">
         {isDesktop

@@ -20,17 +20,51 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Content/PLPBreadcrumb.tsx",
+        "page": {
+          "__resolveType": "PLP Loader"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "website/flags/multivariate/section.ts",
+        "variants": [
+          {
+            "value": {
+              "__resolveType": "site/sections/Images/PLPBanner.tsx",
+              "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/44599f2d-f87d-47a0-ba64-d919371537da/b8ca3ff1-28cc-422d-bddc-3b5742ca617b___678586a6847f4d65c2baa575fdef2a22.webp",
+              "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/epocacosmeticos/2e82e488-3e81-459e-bde5-a83057e2da90/31f9edf3-3882-4dae-84c0-97c5b3977b61___7161aeabf56c468f275d119a4ab4d6f4.webp",
+              "href": "/calvin-klein",
+              "title": "Perfumes Importados",
+              "description": "Os melhores perfumes importados e nacionais, perfumes femininos e masculinos pra quem gosta de destacar sua personalidade através de fragrâncias únicas.  Variedade de marcas com a segurança de perfumes autênticos."
+            },
+            "rule": {
+              "__resolveType": "website/matchers/pathname.ts",
+              "case": {
+                "type": "Equals",
+                "pathname": "/perfumes"
+              }
+            }
+          },
+          {
+            "value": {
+              "__resolveType": "site/sections/Empty.tsx"
+            },
+            "rule": {
+              "__resolveType": "website/matchers/always.ts"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "PLP Loader"
-        },
-        "layout": {
-          "columns": {
-            "mobile": 2,
-            "desktop": 4
-          },
-          "variant": "aside",
-          "pagination": "show-more"
         },
         "startingPage": 1
       }

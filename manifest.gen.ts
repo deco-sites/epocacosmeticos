@@ -15,18 +15,22 @@ import * as $$$3 from "./loaders/user.ts";
 import * as $$$4 from "./loaders/wishlist.ts";
 import * as $$$$$$0 from "./sections/Component.tsx";
 import * as $$$$$$1 from "./sections/Content/BrandSlider.tsx";
-import * as $$$$$$2 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$3 from "./sections/Header/Header.tsx";
-import * as $$$$$$4 from "./sections/Images/Banner.tsx";
-import * as $$$$$$5 from "./sections/Images/BannerSlider.tsx";
-import * as $$$$$$6 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$7 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$8 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$9 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$10 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$11 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$12 from "./sections/Session.tsx";
-import * as $$$$$$13 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$2 from "./sections/Content/PLPBreadcrumb.tsx";
+import * as $$$$$$3 from "./sections/Empty.tsx";
+import * as $$$$$$4 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$5 from "./sections/Header/Header.tsx";
+import * as $$$$$$6 from "./sections/Images/Banner.tsx";
+import * as $$$$$$7 from "./sections/Images/BannerSlider.tsx";
+import * as $$$$$$8 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$9 from "./sections/Images/PDPBanner.tsx";
+import * as $$$$$$10 from "./sections/Images/PLPBanner.tsx";
+import * as $$$$$$11 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$12 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$13 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$14 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$15 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$16 from "./sections/Session.tsx";
+import * as $$$$$$17 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -39,18 +43,22 @@ const manifest = {
   "sections": {
     "site/sections/Component.tsx": $$$$$$0,
     "site/sections/Content/BrandSlider.tsx": $$$$$$1,
-    "site/sections/Footer/Footer.tsx": $$$$$$2,
-    "site/sections/Header/Header.tsx": $$$$$$3,
-    "site/sections/Images/Banner.tsx": $$$$$$4,
-    "site/sections/Images/BannerSlider.tsx": $$$$$$5,
-    "site/sections/Images/Carousel.tsx": $$$$$$6,
-    "site/sections/Images/ShoppableBanner.tsx": $$$$$$7,
-    "site/sections/Product/ProductDetails.tsx": $$$$$$8,
-    "site/sections/Product/ProductShelf.tsx": $$$$$$9,
-    "site/sections/Product/SearchResult.tsx": $$$$$$10,
-    "site/sections/Product/Wishlist.tsx": $$$$$$11,
-    "site/sections/Session.tsx": $$$$$$12,
-    "site/sections/Theme/Theme.tsx": $$$$$$13,
+    "site/sections/Content/PLPBreadcrumb.tsx": $$$$$$2,
+    "site/sections/Empty.tsx": $$$$$$3,
+    "site/sections/Footer/Footer.tsx": $$$$$$4,
+    "site/sections/Header/Header.tsx": $$$$$$5,
+    "site/sections/Images/Banner.tsx": $$$$$$6,
+    "site/sections/Images/BannerSlider.tsx": $$$$$$7,
+    "site/sections/Images/Carousel.tsx": $$$$$$8,
+    "site/sections/Images/PDPBanner.tsx": $$$$$$9,
+    "site/sections/Images/PLPBanner.tsx": $$$$$$10,
+    "site/sections/Images/ShoppableBanner.tsx": $$$$$$11,
+    "site/sections/Product/ProductDetails.tsx": $$$$$$12,
+    "site/sections/Product/ProductShelf.tsx": $$$$$$13,
+    "site/sections/Product/SearchResult.tsx": $$$$$$14,
+    "site/sections/Product/Wishlist.tsx": $$$$$$15,
+    "site/sections/Session.tsx": $$$$$$16,
+    "site/sections/Theme/Theme.tsx": $$$$$$17,
   },
   "actions": {
     "site/actions/minicart/submit.ts": $$$$$$$$$0,
