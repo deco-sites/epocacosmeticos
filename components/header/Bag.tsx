@@ -18,7 +18,7 @@ export default function Bag() {
 
   return (
     <>
-      <label class="relative group" for={MINICART_DRAWER_ID}>
+      <label class="relative group cursor-pointer" for={MINICART_DRAWER_ID}>
         <div
           id={id}
           class="h-5 min-w-5 p-1 top-0 right-0 translate-x-1/3 -translate-y-1/4 absolute rounded-full bg-[#e70d91] border-2 border-white group-hover:border-[#e70d91] transition-colors text-white font-bold flex items-center justify-center text-xs"
