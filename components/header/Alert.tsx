@@ -1,17 +1,23 @@
 import { useDevice, useScript } from "@deco/deco/hooks";
 import type { ImageWidget, RichText } from "apps/admin/widgets.ts";
 import { clx } from "../../sdk/clx.ts";
+
 /**
- * @titleBy text
+ * @titleBy desktopText
  */
 export interface Alert {
+  /** @title Texto desktop */
   desktopText: RichText;
+  /** @title Ícone desktop */
   desktopLeftIcon?: ImageWidget;
+  /** @title Texto mobile */
   mobileText: RichText;
+  /** @title Ícone mobile */
   mobileLeftIcon?: ImageWidget;
 }
 
 interface Props {
+  /** @title Alertas */
   alerts: Alert[];
 }
 

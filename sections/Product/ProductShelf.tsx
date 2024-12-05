@@ -5,6 +5,7 @@ import Section, {
 } from "../../components/ui/Section.tsx";
 
 export interface Props extends SectionHeaderProps {
+  /** @title Integração	 */
   products: Product[] | null;
 }
 

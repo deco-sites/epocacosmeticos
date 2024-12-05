@@ -8,9 +8,9 @@ import Sort from "./Sort.tsx";
 import Icon from "../ui/Icon.tsx";
 
 export interface Props {
-  /** @title Integration */
+  /** @title Integração	 */
   page: ProductListingPage | null;
-  /** @description 0 for ?page=0 as your first page */
+  /** @description 0 para ?page=0 como sua primeira página */
   startingPage?: 0 | 1;
   /** @hidden */
   partial?: "hideMore" | "hideLess";

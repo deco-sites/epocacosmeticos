@@ -5,8 +5,11 @@ import { Picture, SourceWithFit } from "../../components/PictureWithFit.tsx";
 export interface Props {
   mobile: ImageWidget;
   desktop: ImageWidget;
+  /** @title Link */
   href: string;
+  /** @title Título */
   title: string;
+  /** @title Descrição */
   description: string;
 }
 

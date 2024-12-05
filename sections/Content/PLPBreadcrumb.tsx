@@ -3,6 +3,7 @@ import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 
 interface Props {
+  /** @title Integração */
   page: ProductListingPage | null;
 }
 

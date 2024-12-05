@@ -13,7 +13,7 @@ import Print from "../../sdk/Print.tsx";
 import { slugify } from "apps/vtex/utils/slugify.ts";
 
 export interface Props {
-  /** @title Integration */
+  /** @title Integração	 */
   page: ProductDetailsPage | null;
 }
 

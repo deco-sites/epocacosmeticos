@@ -6,36 +6,42 @@ import { clx } from "../../sdk/clx.ts";
  * @titleBy name
  */
 interface InnerItem {
+  /** @title Nome */
   name: string;
-  link: string;
+  /** @title Link */
+  href: string;
 }
 
 /**
  * @titleBy title
  */
 interface Item {
+  /** @title Título */
   title: string;
-  link: string;
+  /** @title Link */
+  href: string;
+  /** @title Itens */
   items: InnerItem[];
 }
 
 export interface Props {
+  /** @title Itens */
   items: Item[];
 }
 
 function Desktop({ items }: Props) {
   const ALL_ITEMS = {
     title: "Ver tudo",
-    link: "",
-    items: items.map(({ title, link }) => ({ name: title, link })),
+    href: "",
+    items: items.map(({ title, href }) => ({ name: title, href })),
   };
 
   return (
     <nav class="flex h-12">
       <ul class="flex w-full">
-        {[ALL_ITEMS, ...items].map(({ title, link, items }, index) => {
-          const Name = link ? "a" : "div";
-          const NameProps = link ? { href: link } : {};
+        {[ALL_ITEMS, ...items].map(({ title, href, items }, index) => {
+          const Name = href ? "a" : "div";
+          const NameProps = href ? { href: href } : {};
 
           return (
             <li class={clx(index !== 0 && "flex-1")}>
@@ -54,9 +60,9 @@ function Desktop({ items }: Props) {
               {items.length > 0 && (
                 <div class="absolute left-0 top-full bg-[#f9f9f9] w-screen min-h-[250px] py-3 z-10 hidden peer-hover:flex hover:flex">
                   <ul class="grid grid-cols-3 auto-rows-max items-center container">
-                    {items.map(({ name, link }) => (
+                    {items.map(({ name, href }) => (
                       <li class="flex items-center h-10">
-                        <a href={link} class="text-[#333] hover:text-[#e70d91]">
+                        <a href={href} class="text-[#333] hover:text-[#e70d91]">
                           {name}
                         </a>
                       </li>
@@ -78,29 +84,29 @@ function Mobile({ items }: Props) {
   const LAST_ASIDE_ITEMS = [
     {
       title: "Minha conta",
-      link: "#/",
+      href: "#/",
     },
     {
       title: "Meus pedidos",
-      link: "#/",
+      href: "#/",
     },
     {
       title: "Rastrear meus pedidos",
-      link: "#/",
+      href: "#/",
     },
     {
       title: "Atendimento",
-      link: "#/",
+      href: "#/",
     },
     {
       title: "Acessibilidade",
-      link: "#/",
+      href: "#/",
     },
   ];
   const ALL_ITEMS = {
     title: "Ver tudo",
-    link: "",
-    items: items.map(({ title, link }) => ({ name: title, link })),
+    href: "",
+    items: items.map(({ title, href }) => ({ name: title, href })),
   };
 
   return (
@@ -128,12 +134,12 @@ function Mobile({ items }: Props) {
         </div>
 
         <ul class="flex flex-col divide-y divide-[#e8e3e8]">
-          {[ALL_ITEMS, ...items].map(({ title, link, items }) => {
+          {[ALL_ITEMS, ...items].map(({ title, href, items }) => {
             const id = useId();
             const hasItems = items.length > 0;
 
-            const Name = link ? "a" : "div";
-            const NameProps = link ? { href: link } : {};
+            const Name = href ? "a" : "div";
+            const NameProps = href ? { href: href } : {};
 
             return (
               <li class="flex flex-col">
@@ -152,7 +158,7 @@ function Mobile({ items }: Props) {
                       for={id}
                       class={clx(
                         "pr-6 flex items-center justify-end h-full",
-                        link ? "w-1/4" : "w-full",
+                        href ? "w-1/4" : "w-full",
                       )}
                     >
                       <Icon
@@ -167,10 +173,10 @@ function Mobile({ items }: Props) {
                 {hasItems && (
                   <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] transition-all duration-[200ms]">
                     <ul class="overflow-hidden divide-y divide-[#e8e3e8]">
-                      {items.map(({ name, link }) => (
+                      {items.map(({ name, href }) => (
                         <li>
                           <a
-                            href={link}
+                            href={href}
                             class="text-[#333] bg-[#efefef] flex h-[72px] items-center pl-6"
                           >
                             {name}
@@ -185,9 +191,9 @@ function Mobile({ items }: Props) {
           })}
 
           <div class="divide-y divide-white">
-            {LAST_ASIDE_ITEMS.map(({ title, link }) => (
+            {LAST_ASIDE_ITEMS.map(({ title, href }) => (
               <a
-                href={link}
+                href={href}
                 class="bg-[#333] text-white flex h-[72px] items-center pl-6"
               >
                 {title}

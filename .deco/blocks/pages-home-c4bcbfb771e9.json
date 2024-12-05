@@ -54,7 +54,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/BannerSlider.tsx",
-        "items": [
+        "images": [
           {
             "mobile": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVERMOBILE-0312-CARD1-9276.png",
             "desktop": "https://epocacosmeticos.vteximg.com.br/arquivos/EPOCAADS-WELLA-INSTITUC-CARDSTAKEOVER-0312-CARD1-9272.png",

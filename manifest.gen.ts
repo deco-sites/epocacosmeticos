@@ -24,13 +24,11 @@ import * as $$$$$$7 from "./sections/Images/BannerSlider.tsx";
 import * as $$$$$$8 from "./sections/Images/Carousel.tsx";
 import * as $$$$$$9 from "./sections/Images/PDPBanner.tsx";
 import * as $$$$$$10 from "./sections/Images/PLPBanner.tsx";
-import * as $$$$$$11 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$12 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$13 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$14 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$15 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$16 from "./sections/Session.tsx";
-import * as $$$$$$17 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$11 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$12 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$13 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$14 from "./sections/Session.tsx";
+import * as $$$$$$15 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -52,13 +50,11 @@ const manifest = {
     "site/sections/Images/Carousel.tsx": $$$$$$8,
     "site/sections/Images/PDPBanner.tsx": $$$$$$9,
     "site/sections/Images/PLPBanner.tsx": $$$$$$10,
-    "site/sections/Images/ShoppableBanner.tsx": $$$$$$11,
-    "site/sections/Product/ProductDetails.tsx": $$$$$$12,
-    "site/sections/Product/ProductShelf.tsx": $$$$$$13,
-    "site/sections/Product/SearchResult.tsx": $$$$$$14,
-    "site/sections/Product/Wishlist.tsx": $$$$$$15,
-    "site/sections/Session.tsx": $$$$$$16,
-    "site/sections/Theme/Theme.tsx": $$$$$$17,
+    "site/sections/Product/ProductDetails.tsx": $$$$$$11,
+    "site/sections/Product/ProductShelf.tsx": $$$$$$12,
+    "site/sections/Product/SearchResult.tsx": $$$$$$13,
+    "site/sections/Session.tsx": $$$$$$14,
+    "site/sections/Theme/Theme.tsx": $$$$$$15,
   },
   "actions": {
     "site/actions/minicart/submit.ts": $$$$$$$$$0,

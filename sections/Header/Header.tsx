@@ -12,15 +12,12 @@ import Navbar, {
 import Searchbar from "../../components/search/Searchbar/Form.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 
-export interface Logo {
-  src: ImageWidget;
-  alt: string;
-}
-
 interface Props {
+  /** @title Alertas */
   alerts?: AlertType[];
   /** @title Logo */
-  logo: Logo;
+  logo: ImageWidget;
+  /** @title Barra de navegação */
   navBar: NavbarProps;
 }
 
@@ -28,7 +25,7 @@ const Desktop = ({ logo, navBar }: Props) => (
   <div class="flex flex-col">
     <div class="flex items-center justify-between p-3 pt-2 border-b border-[#e2e8f0]">
       <a href="/">
-        <Image src={logo.src} alt={logo.alt} width={220} height={60} />
+        <Image src={logo} alt="Logo" width={220} height={60} />
       </a>
       <Searchbar />
 
@@ -82,7 +79,7 @@ const Mobile = ({ logo, navBar }: Props) => (
       <div class="flex items-center gap-3">
         <Navbar {...navBar} />
         <a href="/">
-          <Image src={logo.src} alt={logo.alt} width={112} height={60} />
+          <Image src={logo} alt="Logo" width={112} height={60} />
         </a>
       </div>
 

@@ -5,26 +5,31 @@ import Slider from "../../components/ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
 import { useDevice } from "@deco/deco/hooks";
 
+/** @titleBy alt */
 interface Item {
   desktop: ImageWidget;
   mobile: ImageWidget;
+  /** @title Link */
   href: string;
+  /** @title Descreva a imagem */
   alt: string;
 }
 
 interface Props {
-  items: Item[];
+  /** @title Itens */
+  images: Item[];
+  /** @description É a maior imagem do site? */
   preload?: boolean;
 }
 
-export default function BannerSlider({ items, preload }: Props) {
+export default function BannerSlider({ images, preload }: Props) {
   const id = useId();
   const isDesktop = useDevice() === "desktop";
 
   return (
     <div id={id} class="container relative flex flex-col gap-8 mb-20 md:mb-16">
       <Slider class="carousel w-full gap-4">
-        {items.map(({ href, desktop, mobile, alt }, index) => (
+        {images.map(({ href, desktop, mobile, alt }, index) => (
           <Slider.Item
             index={index}
             class="carousel-item justify-center w-full md:w-[calc(33.333%-16px+(16px/3))] lg:w-[calc(25%-16px+(16px/4))]"
@@ -62,7 +67,7 @@ export default function BannerSlider({ items, preload }: Props) {
       {!isDesktop && (
         <>
           <div class="flex justify-center gap-3 md:gap-2 absolute -bottom-6 md:bottom-6 left-1/2 -translate-x-1/2">
-            {items.map((_, index) => (
+            {images.map((_, index) => (
               <Slider.Dot
                 index={index}
                 class="bg-black/20 size-2.5 disabled:bg-[#e70d91] rounded-full"

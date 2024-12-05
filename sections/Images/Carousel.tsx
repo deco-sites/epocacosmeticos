@@ -6,21 +6,20 @@ import Slider from "../../components/ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
 import { useDevice } from "@deco/deco/hooks";
 
-/**
- * @titleBy alt
- */
-export interface Banner {
+/** @titleBy alt */
+interface Item {
   desktop: ImageWidget;
   mobile: ImageWidget;
-  alt: string;
+  /** @title Link */
   href: string;
+  /** @title Descreva a imagem */
+  alt: string;
 }
 
-export interface Props {
-  images?: Banner[];
-  /**
-   * @description Check this option when this banner is the biggest image on the screen for image optimizations
-   */
+interface Props {
+  /** @title Itens */
+  images: Item[];
+  /** @title É a maior imagem do site? (preload) */
   preload?: boolean;
 }
 

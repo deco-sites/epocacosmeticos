@@ -6,13 +6,20 @@ import { useDevice } from "@deco/deco/hooks";
 import Section from "../../components/ui/Section.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 
+/**
+ * @titleBy href
+ */
 interface Brand {
+  /** @title Imagem */
   image: ImageWidget;
+  /** @title Link */
   href: string;
 }
 
 interface Props {
+  /** @title Marcas */
   brands: Brand[];
+  /** @title Título */
   title: string;
 }
 
